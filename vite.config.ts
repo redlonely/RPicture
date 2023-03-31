@@ -25,6 +25,7 @@ export default defineConfig({
     open: false,
     proxy: {
       "/api": {
+        // 接口是自己用node搭的，中转了一下，你也可以直接使用 腾讯或阿里的 cos sdk
         target: "http://localhost:9527",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),

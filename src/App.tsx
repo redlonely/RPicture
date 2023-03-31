@@ -1,11 +1,11 @@
-import { FC, useState } from "react";
+import { FC, useState } from "react"
 
-import router from "./routers";
+import router from "./routers"
 
-import "@/assets/styles/App.less";
+import "@/assets/styles/App.less"
 
-import { GlobalContext } from "@/context";
-import { RouterProvider } from "react-router";
+import { GlobalContext } from "@/context"
+import { RouterProvider } from "react-router"
 
 interface GlobalContext {
   theme: string;
@@ -13,14 +13,13 @@ interface GlobalContext {
 }
 
 const App: FC = () => {
-  const [theme, setTheme] = useState("light");
-  const contextVal = { theme, setTheme } as GlobalContext;
-
+  const [theme, setTheme] = useState("light")
+  const contextVal = { theme, setTheme } as GlobalContext
   return (
-    <GlobalContext.Provider value={contextVal}>
-      <RouterProvider router={router} />
+    <GlobalContext.Provider value={ contextVal }>
+      <RouterProvider router={ router }/>
     </GlobalContext.Provider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
